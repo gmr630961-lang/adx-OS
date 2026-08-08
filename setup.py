@@ -1,6 +1,6 @@
-run this in python 
-insta pip lib - flask before running this code in python 
-adxLABS by anurag/hemant
+#run this in python 
+#insta pip lib - flask before running this code in python 
+#adxLABS by anurag/hemant
 
 from flask import Flask, send_from_directory
 import os
