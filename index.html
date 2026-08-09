@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ADX x OS - Right Taskbar</title>
+    <title>ADX x OS - Secure</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* -------------------- CSS STYLES -------------------- */
@@ -266,13 +266,17 @@
 
     <script>
         /* -------------------- JAVASCRIPT LOGIC -------------------- */
-        const WEBHOOK_URL = "https://discord.com/api/webhooks/1531996439411167304/oexY_geeeP2Ski-98RNAnDO8-bonjzv7Li4FfnLkHbRbspLug-RUiqWzIur4EDNCeGtx";
         
-        // 🔒 AI API KEY HIDDEN IN LOCALSTORAGE
-        if(!localStorage.getItem('ADX_AI_KEY')) {
-            localStorage.setItem('ADX_AI_KEY', "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");
+        // 🔒 SECURE LOAD: Keys are fetched from localStorage
+        if(!localStorage.getItem('WEBHOOK_URL')) {
+            localStorage.setItem('WEBHOOK_URL', "https://discord.com/api/webhooks/1531996439411167304/oexY_geeeP2Ski-98RNAnDO8-bonjzv7Li4FfnLkHbRbspLug-RUiqWzIur4EDNCeGtx");
         }
-        const AI_API_KEY = localStorage.getItem('ADX_AI_KEY');
+        if(!localStorage.getItem('AI_API_KEY')) {
+            localStorage.setItem('AI_API_KEY', "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");
+        }
+        
+        const WEBHOOK_URL = localStorage.getItem('WEBHOOK_URL');
+        const AI_API_KEY = localStorage.getItem('AI_API_KEY');
         const AI_MODEL = "cohere/north-mini-code:free";
         const ADMIN_USER = "adx";
         const ADMIN_PASS = "adxadmin@123";
