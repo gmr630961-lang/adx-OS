@@ -1,0 +1,7 @@
+ADX-x-OS/
+├── index.html
+├── ADX_OS_Server_Native_Short.py
+├── launch_os.bat
+├── requirements.txt
+├── README.md
+└── .gitignore
